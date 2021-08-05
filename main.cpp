@@ -50,7 +50,8 @@ void randomizetitle()
 	std::mt19937 mt(rd());
 	std::uniform_int_distribution<> distr(0, 51);
 	std::string name = "";
-	char alphabet[] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+	char alphabet[] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+	'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 	for (int i = 0; i < 15; ++i)
 	{
 		name = name + alphabet[distr(mt)];
@@ -65,8 +66,8 @@ static void printf_sucess_lic() {
 	std::cout << "  " << color(blue) << "EN:" << color(grey) << "" << strenc(" you have license, your days ")
 		<< color(blue) << auth::get_days_user() <<  color(grey) << strenc(" for use cheat.") << std::endl;
 
-	std::cout << "  " << color(blue) << "RU:" << color(grey) << "" << strenc(" âû èìååòå ëèöåíçèþ, âàøè äíè ")
-		<< color(blue) << auth::get_days_user() << color(grey) << strenc(" äëÿ èñïîëüçîâàíèÿ ïðîäóêòà.") << std::endl;
+	std::cout << "  " << color(blue) << "RU:" << color(grey) << "" << strenc(" Ã¢Ã» Ã¨Ã¬Ã¥Ã¥Ã²Ã¥ Ã«Ã¨Ã¶Ã¥Ã­Ã§Ã¨Ã¾, Ã¢Ã Ã¸Ã¨ Ã¤Ã­Ã¨ ")
+		<< color(blue) << auth::get_days_user() << color(grey) << strenc(" Ã¤Ã«Ã¿ Ã¨Ã±Ã¯Ã®Ã«Ã¼Ã§Ã®Ã¢Ã Ã­Ã¨Ã¿ Ã¯Ã°Ã®Ã¤Ã³ÃªÃ²Ã .") << std::endl;
 
 	Sleep(2555);
 
@@ -74,8 +75,8 @@ static void printf_sucess_lic() {
 	std::cout << "  " << color(blue) << "EN:" << color(grey) << "" << strenc(" write ")
 		<< color(blue) << "/inject" << color(grey) << strenc(" for inject cheat.") << std::endl;
 
-	std::cout << "  " << color(blue) << "RU:" << color(grey) << "" << strenc(" íàïèøèòå ")
-		<< color(blue) << "/inject" << color(grey) << strenc(" äëÿ âíåäðåíèÿ ïðîäóêòà.") << std::endl;
+	std::cout << "  " << color(blue) << "RU:" << color(grey) << "" << strenc(" Ã­Ã Ã¯Ã¨Ã¸Ã¨Ã²Ã¥ ")
+		<< color(blue) << "/inject" << color(grey) << strenc(" Ã¤Ã«Ã¿ Ã¢Ã­Ã¥Ã¤Ã°Ã¥Ã­Ã¨Ã¿ Ã¯Ã°Ã®Ã¤Ã³ÃªÃ²Ã .") << std::endl;
 
 
 	std::cin >> inj;
@@ -95,7 +96,7 @@ static void printf_sucess_lic() {
 	else {
 		std::cout << "" << std::endl;
 		std::cout << "  " << color(red) << "EN:" << color(grey) << strenc(" unknown command") << std::endl;
-		std::cout << "  " << color(red) << "RU:" << color(grey) << strenc(" íåèçâåñòíàÿ êîìàíäà") << std::endl;
+		std::cout << "  " << color(red) << "RU:" << color(grey) << strenc(" Ã­Ã¥Ã¨Ã§Ã¢Ã¥Ã±Ã²Ã­Ã Ã¿ ÃªÃ®Ã¬Ã Ã­Ã¤Ã ") << std::endl;
 		Sleep(1200);
 	}
 
@@ -157,8 +158,8 @@ static void check_options() {
 		std::cout << "  " << color(red) << "EN:" << color(grey) << "" << strenc(" run as an ") << color(red)
 			<< "admin" << std::endl;
 
-		std::cout << "  " << color(red) << "RU:" << color(grey) << "" << strenc(" çàïóñòèòå îò èìåíè ") << color(red)
-			<< "àäìèíà" << std::endl;
+		std::cout << "  " << color(red) << "RU:" << color(grey) << "" << strenc(" Ã§Ã Ã¯Ã³Ã±Ã²Ã¨Ã²Ã¥ Ã®Ã² Ã¨Ã¬Ã¥Ã­Ã¨ ") << color(red)
+			<< "Ã Ã¤Ã¬Ã¨Ã­Ã " << std::endl;
 
 		Sleep(2500);
 		exit(1);
@@ -170,8 +171,8 @@ static void printf_error_lic() {
 	std::cout << "  " << color(red) << "EN:" << color(grey) << "" << strenc(" you dont have ") << color(red) << "license"  << color(grey)
 		 << strenc(" to use cheat.") << std::endl;
 
-	std::cout << "  " << color(red) << "RU:" << color(grey) << "" << strenc(" âû íå èìååòå ") << color(red) << "ëèöåíçèè" << color(grey)
-		<< strenc(" äëÿ èñïîëüçîâàíèÿ ïðîäóêòà.") << std::endl;
+	std::cout << "  " << color(red) << "RU:" << color(grey) << "" << strenc(" Ã¢Ã» Ã­Ã¥ Ã¨Ã¬Ã¥Ã¥Ã²Ã¥ ") << color(red) << "Ã«Ã¨Ã¶Ã¥Ã­Ã§Ã¨Ã¨" << color(grey)
+		<< strenc(" Ã¤Ã«Ã¿ Ã¨Ã±Ã¯Ã®Ã«Ã¼Ã§Ã®Ã¢Ã Ã­Ã¨Ã¿ Ã¯Ã°Ã®Ã¤Ã³ÃªÃ²Ã .") << std::endl;
 	Sleep(2555);
 
 	exit(1);
